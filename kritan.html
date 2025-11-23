@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Kritan Basnet - Cybersecurity Enthusiast & Python Developer">
+    <title>Kritan Basnet | Security & Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#0E141E', 
+                        surface: '#1A2433', 
+                        surface2: '#283345', 
+                        primary: '#00FFFF', 
+                        secondary: '#9CA3AF', 
+                        accent: '#FF7F50', 
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0E141E;
+            color: #E5E7EB;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .bg-grid {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+        }
+
+        .modern-card {
+            background: #1A2433;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 12px;
+        }
+
+        .modern-card:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+            border-color: #00FFFF;
+            transform: translateY(-5px);
+        }
+
+        .hero-border {
+            border-image: linear-gradient(45deg, #00FFFF, #58A6FF, #00FFFF) 1;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0E141E; }
+        ::-webkit-scrollbar-thumb { background: #283345; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00FFFF; }
+
+        .skill-bar-fill {
+            width: 0%; 
+            transition: width 1s ease-out;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), 0 0 0 0 rgba(0, 255, 255, 0); }
+            50% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 0 5px rgba(0, 255, 255, 0.1); }
+            100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), 0 0 0 0 rgba(0, 255, 255, 0); }
+        }
+
+        .pulsing-border {
+            animation: pulseGlow 4s infinite ease-in-out;
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .slide-in-right {
+            animation: slideInRight 1s ease-out;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-bg overflow-x-hidden">
+
+    <div class="fixed inset-0 bg-grid -z-10 pointer-events-none"></div>
+
+    <nav class="fixed w-full z-50 top-0 bg-bg/95 backdrop-blur-md border-b border-white/10 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <span class="font-extrabold text-xl tracking-tight text-white">Kritan<span class="text-primary">.sec</span></span>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Home</a>
+                        <a href="#skills" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Skills</a>
+                        <a href="#specialization" class="text-sm font-medium text-primary hover:text-primary transition-colors font-bold">Mission Focus</a>
+                        <a href="#projects" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Projects</a>
+                        <a href="#contact" class="px-5 py-2.5 text-sm font-bold text-bg bg-primary rounded-full hover:bg-white transition-all shadow-[0_0_20px_rgba(0,255,255,0.4)]">
+                            Connect
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center pt-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            <div class="order-2 lg:order-1">
+                
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-none mb-4 slide-in-right">
+                    Kritan Basnet
+                </h1>
+                
+                <p class="text-3xl sm:text-4xl text-primary font-medium leading-snug mb-6 slide-in-right delay-[.2s]">
+                    <span class="text-secondary font-light">//</span> Elite Security Engineer in Training
+                </p>
+                
+                <p class="text-lg text-secondary max-w-lg mb-10 leading-relaxed border-l-4 border-primary/50 pl-4">
+                    I am a **self-driven** security researcher and developer, relentlessly focused on mastering **system hardening**, **vulnerability analysis**, and **security automation** using Python. My foundation is built through independent study and practical application, targeting a career in high-stakes defensive and offensive security engineering.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="flex items-center gap-3 px-7 py-3 rounded-full bg-primary text-bg hover:bg-white transition-all font-semibold shadow-xl shadow-primary/30">
+                        <i class="fas fa-microchip"></i>
+                        View Executed Projects
+                    </a>
+                    <a href="https://linkedin.com/in/kritanbasnet" target="_blank" class="flex items-center gap-3 px-7 py-3 rounded-full bg-surface2 border border-white/20 text-white hover:border-primary transition-all font-semibold">
+                        <i class="fab fa-linkedin"></i>
+                        Professional Profile
+                    </a>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 flex justify-center p-6">
+                <div class="w-full max-w-md bg-surface border border-primary/50 rounded-xl shadow-2xl shadow-primary/10 overflow-hidden pulsing-border">
+                    <div class="bg-surface2 p-3 flex items-center gap-2 border-b border-white/10">
+                        <div class="flex gap-1.5">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <span class="flex-1 text-center text-xs font-mono text-secondary">terminal@kritan-station:~</span>
+                    </div>
+                    <div class="p-6 font-mono text-sm space-y-2">
+                        <p class="text-primary">TASK: APT_SIMULATION_01</p>
+                        <p class="text-secondary">TARGET: CRITICAL_INFRASTRUCTURE_FW.BIN</p>
+                        <p class="text-secondary">STATUS: ATTEMPTING UART DATA EXTRACTION...</p>
+                        <p class="text-secondary">PROGRESS: <span class="text-yellow-500 font-bold">45% COMPLETE</span></p>
+                        <p class="mt-4 text-secondary">---------------------------</p>
+                        <p class="text-white">RESULT: High-entropy binary data recovered.</p>
+                        <p class="text-primary">NEXT: REVERSING WITH GHIDRA...</p>
+                        <p class="text-white pt-2">kritan@kali-box$ <span class="animate-pulse">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-white mb-3">Technical Stack & Proficiency</h2>
+                <p class="text-lg text-secondary">The tools and languages I use for development and security research.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="modern-card p-8 group">
+                    <i class="fab fa-python text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Core Development</h3>
+                    <p class="text-secondary text-sm mb-5">Building robust automation scripts, backend logic, and utility tools.</p>
+                    
+                    <div class="skill-bar-container h-1.5 w-full bg-surface2/50 rounded-full mb-4 overflow-hidden" data-proficiency="90">
+                        <div class="skill-bar-fill h-full bg-primary" style="width: 0%;"></div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="px-3 py-1 bg-primary/10 rounded-full text-primary font-medium">Python (Advanced)</span>
+                        <span class="px-3 py-1 bg-surface2 rounded-full text-secondary font-medium">C</span>
+                        <span class="px-3 py-1 bg-surface2 rounded-full text-secondary font-medium">Django (Learning)</span>
+                        <span class="px-3 py-1 bg-surface2 rounded-full text-secondary font-medium">Git / GitHub</span>
+                    </div>
+                </div>
+
+                <div class="modern-card p-8 group">
+                    <i class="fas fa-fingerprint text-4xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Cybersecurity Fundamentals</h3>
+                    <p class="text-secondary text-sm mb-5">Vulnerability identification, network mapping, and OS defense practices.</p>
+
+                    <div class="skill-bar-container h-1.5 w-full bg-surface2/50 rounded-full mb-4 overflow-hidden" data-proficiency="75">
+                        <div class="skill-bar-fill h-full bg-accent" style="width: 0%;"></div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="px-3 py-1 bg-accent/10 rounded-full text-accent font-medium">Kali Linux</span>
+                        <span class="px-3 py-1 bg-primary/10 rounded-full text-primary font-medium">NMAP & Scanners</span>
+                        <span class="px-3 py-1 bg-surface2 rounded-full text-secondary font-medium">Networking Basics</span>
+                        <span class="px-3 py-1 bg-surface2 rounded-full text-secondary font-medium">Termux</span>
+                    </div>
+                </div>
+
+                <div class="modern-card p-8 group">
+                    <i class="fas fa-server text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Infrastructure & Front-end</h3>
+                    <p class="text-secondary text-sm mb-5">Creating responsive UIs and understanding foundational web technologies.</p>
+
+                    <div class="skill-bar-container h-1.5 w-full bg-surface2/50 rounded-full mb-4 overflow-hidden" data-proficiency="60">
+                        <div class="skill-bar-fill h-full bg-green-500" style="width: 0%;"></div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="px-3 py-1 bg-green-500/10 rounded-full text-green-500 font-medium">HTML5 / CSS3</span>
+                        <span class="px-3 py-1 bg-green-500/10 rounded-full text-green-500 font-medium">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-surface2 rounded-full text-secondary font-medium">Basic JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specialization" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <h2 class="text-4xl font-extrabold text-white mb-3">Mission-Critical Specialization: High-Stakes Security Focus</h2>
+                    <p class="text-lg text-primary">Targeting advanced, low-level domains essential for national security and government defense missions.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="modern-card p-8 bg-surface2 border-l-4 border-accent">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i class="fas fa-microchip text-3xl text-accent"></i>
+                        <h3 class="text-2xl font-bold text-white">Hardware & Supply Chain Exploitation</h3>
+                    </div>
+                    <p class="text-secondary mb-4">Deep dive into physical security and chip-level analysis. Skills include **JTAG/UART protocol sniffing**, **firmware extraction/reversing**, and **side-channel analysis** (e.g., fault injection) against trusted hardware.</p>
+                    <span class="px-3 py-1 text-xs font-medium bg-accent/20 text-accent rounded-full">PHYSICAL & CHIP-LEVEL</span>
+                </div>
+
+                <div class="modern-card p-8 bg-surface2 border-l-4 border-blue-500">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i class="fas fa-industry text-3xl text-blue-500"></i>
+                        <h3 class="text-2xl font-bold text-white">Industrial Control Systems (ICS/SCADA) Defense</h3>
+                    </div>
+                    <p class="text-secondary mb-4">Specializing in Operational Technology (OT) security, vital for national critical infrastructure. Focus on **Modbus/DNP3 protocol analysis**, **PLC/RTU firmware hardening**, and securing the convergence of IT/OT environments.</p>
+                    <span class="px-3 py-1 text-xs font-medium bg-blue-500/20 text-blue-500 rounded-full">CRITICAL INFRASTRUCTURE</span>
+                </div>
+
+                <div class="modern-card p-8 bg-surface2 border-l-4 border-green-500">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i class="fas fa-code-branch text-3xl text-green-500"></i>
+                        <h3 class="text-2xl font-bold text-white">Advanced Binary RE & Obfuscation Defeat</h3>
+                    </div>
+                    <p class="text-secondary mb-4">Mastering tools like **Ghidra/IDA Pro** to reverse-engineer stripped binaries, identifying novel vulnerabilities for **zero-day research**, and analyzing sophisticated malware techniques used by advanced persistent threats (APTs).</p>
+                    <span class="px-3 py-1 text-xs font-medium bg-green-500/20 text-green-500 rounded-full">LOW-LEVEL SKILLS & APT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-white mb-3">Executed Code & Research</h2>
+                <p class="text-lg text-secondary">Practical applications demonstrating my core development and security skills.</p>
+            </div>
+
+            <div class="space-y-6">
+                
+                <div class="modern-card p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-lock-open text-xl text-red-500"></i>
+                            <h3 class="text-2xl font-bold text-white">Keylogger Simulation Utility</h3>
+                        </div>
+                        <p class="text-secondary mb-4">A foundational script developed to understand system-level input capturing, local persistence, and covert data transmission protocols (SMTP). Purely for defense and education.</p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-3 py-1 bg-red-600/10 rounded-full text-red-400 font-medium">SYSTEM I/O</span>
+                            <span class="px-3 py-1 bg-primary/10 rounded-full text-primary font-medium">PYTHON</span>
+                            <span class="px-3 py-1 bg-surface2 rounded-full text-secondary font-medium">EDUCATIONAL</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/kritanbasnet/keylogger-sim" target="_blank" class="px-5 py-2.5 text-sm font-bold text-primary border border-primary rounded-full hover:bg-primary hover:text-bg transition-colors flex-shrink-0 mt-4 md:mt-0">
+                        View Code
+                    </a>
+                </div>
+
+                <div class="modern-card p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-network-wired text-xl text-blue-500"></i>
+                            <h3 class="text-2xl font-bold text-white">Multi-threaded Port Scanner</h3>
+                        </div>
+                        <p class="text-secondary mb-4">A high-performance Python tool utilizing multithreading and the socket library to efficiently map open ports on a target, crucial for reconnaissance tasks.</p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-3 py-1 bg-blue-600/10 rounded-full text-blue-400 font-medium">NETWORKING</span>
+                            <span class="px-3 py-1 bg-primary/10 rounded-full text-primary font-medium">SOCKETS</span>
+                            <span class="px-3 py-1 bg-surface2 rounded-full text-secondary font-medium">THREADING</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/kritanbasnet/threaded-port-scanner" target="_blank" class="px-5 py-2.5 text-sm font-bold text-primary border border-primary rounded-full hover:bg-primary hover:text-bg transition-colors flex-shrink-0 mt-4 md:mt-0">
+                        View Code
+                    </a>
+                </div>
+
+                <div class="modern-card p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-desktop text-xl text-green-500"></i>
+                            <h3 class="text-2xl font-bold text-white">Modern Portfolio UI/UX</h3>
+                        </div>
+                        <p class="text-secondary mb-4">Development of a responsive, aesthetic portfolio using Tailwind CSS, showcasing modern web design principles and front-end proficiency.</p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-3 py-1 bg-green-600/10 rounded-full text-green-400 font-medium">TAILWIND</span>
+                            <span class="px-3 py-1 bg-primary/10 rounded-full text-primary font-medium">HTML5/CSS3</span>
+                            <span class="px-3 py-1 bg-surface2 rounded-full text-secondary font-medium">RESPONSIVE DESIGN</span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="px-5 py-2.5 text-sm font-bold text-primary border border-primary rounded-full hover:bg-primary hover:text-bg transition-colors flex-shrink-0 mt-4 md:mt-0">
+                        Live Demo (You Are Here)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-white mb-16">Education & Credentials</h2>
+            
+            <div class="relative border-l-2 border-white/10 ml-4 md:ml-0 md:pl-8 space-y-12">
+                <div class="relative pl-8 md:pl-0">
+                    <span class="absolute -left-[10px] md:-left-[42px] top-1 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-primary text-xs"></i>
+                    </span>
+                    <h3 class="text-xl font-bold text-white">Class 12 (Science Stream)</h3>
+                    <p class="text-secondary font-semibold text-sm mb-1">Government School, Nepal</p>
+                    <p class="text-secondary text-xs mb-2">Expected Graduation: 2026</p>
+                    <p class="text-gray-400 text-sm">Focusing on Computer Science, Physics, and Mathematics, establishing a robust technical foundation.</p>
+                </div>
+
+                <div class="relative pl-8 md:pl-0">
+                    <span class="absolute -left-[10px] md:-left-[42px] top-1 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+                        <i class="fas fa-certificate text-primary text-xs"></i>
+                    </span>
+                    <h3 class="text-xl font-bold text-white">Cybersecurity Fundamentals</h3>
+                    <p class="text-secondary font-semibold text-sm mb-1">TryHackMe</p>
+                    <p class="text-gray-400 text-sm">Comprehensive training in security basics, Linux CLI, and introductory web vulnerability scanning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-4 bg-surface">
+        <div class="max-w-5xl mx-auto relative rounded-2xl modern-card p-10 md:p-16 text-center shadow-xl shadow-surface/50">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Let's Build Something Secure.</h2>
+            <p class="text-secondary max-w-2xl mx-auto mb-10 text-lg">
+                I am open to collaborative security research, Python development tasks, and mentorship.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button onclick="document.getElementById('email-message').classList.remove('hidden');" class="flex items-center justify-center gap-3 px-8 py-3 bg-primary text-bg rounded-full transition-all font-bold hover:bg-white shadow-[0_0_25px_rgba(0,255,255,0.6)]">
+                    <i class="fas fa-paper-plane"></i>
+                    Initiate Secure Connection
+                </button>
+                
+                <a href="https://github.com/kritanbasnet" target="_blank" class="flex items-center justify-center gap-3 px-8 py-3 bg-surface2 border border-white/20 text-white rounded-full hover:border-primary transition-all font-bold">
+                    <i class="fab fa-github"></i>
+                    Review My Codebase
+                </a>
+            </div>
+            
+            <div id="email-message" class="hidden mt-6 bg-surface2 p-4 rounded-lg border border-primary/50 text-white max-w-sm mx-auto">
+                <p class="font-bold text-primary mb-2">Contact Protocol:</p>
+                <p class="text-sm">Please reach out via LinkedIn or GitHub for initial contact. Direct email is not listed for security purposes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center border-t border-white/10 bg-bg">
+        <p class="text-gray-600 text-sm">
+            Kritan Basnet <span class="text-primary">//</span> SYSTEM STATUS: OPTIMAL
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const setSkillBarWidths = () => {
+                document.querySelectorAll('.skill-bar-container').forEach(container => {
+                    const proficiency = container.getAttribute('data-proficiency');
+                    const fill = container.querySelector('.skill-bar-fill');
+                    
+                    if (fill && proficiency) {
+                        requestAnimationFrame(() => {
+                            fill.style.width = proficiency + '%';
+                        });
+                    }
+                });
+            };
+
+            const skillsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setSkillBarWidths();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection) {
+                skillsObserver.observe(skillsSection);
+            }
+        });
+    </script>
+</body>
+</html>
