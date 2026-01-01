@@ -1,11 +1,18 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    
+  </head>
+  <body>
+      <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Kritan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -52,6 +59,39 @@
     p {
       line-height: 1.6;
     }
+
+
+    
+    .socials {
+      display: flex;
+      gap: 20px;
+}
+
+  .social {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.2s ease;
+  }
+
+  .social i {
+    font-size: 22px;
+  }
+  
+  
+  .fb { color: #1877f2; }
+  .insta { color: #e1306c; }
+  .thm { color: #00ff84; }
+  
+  .social:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+    
   </style>
 </head>
 
@@ -78,9 +118,28 @@
       <li>Kali Linux tools</li>
       <li>Computer Networking</li>
     </ul>
+    <p>Connect Me</p>
 
-   
-    </ul>
+    
+    <div class="socials">
+  <a href="https://facebook.com/yourprofile" target="_blank" class="social fb">
+    <i class="fa-brands fa-square-facebook"></i>
+    <span>Facebook</span>
+  </a>
+
+  <a href="https://instagram.com/yourprofile" target="_blank" class="social insta">
+    <i class="fa-brands fa-instagram"></i>
+    <span>Instagram</span>
+  </a>
+
+  <a href="https://tryhackme.com/p/yourusername" target="_blank" class="social thm">
+    <i class="fa-solid fa-shield-halved"></i>
+    <span>TryHackMe</span>
+  </a>
+</div>
+  
   </div>
 </body>
+</html>
+  </body>
 </html>
